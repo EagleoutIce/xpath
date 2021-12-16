@@ -29,7 +29,6 @@
       "url": "https://github.com/backslash47"
     }
   ],
-  "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/jsdom": "^12.2.0",
