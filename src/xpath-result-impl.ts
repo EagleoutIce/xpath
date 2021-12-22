@@ -43,7 +43,7 @@ export class XPathResultImpl implements XPathResult {
         t = XPathResultImpl.NUMBER_TYPE;
       } else if (v instanceof XBoolean) {
         t = XPathResultImpl.BOOLEAN_TYPE;
-      } else if (v instanceof XNodeSet) {
+      } else if (v instanceof XNodeSet || v == null) {
         t = XPathResultImpl.UNORDERED_NODE_ITERATOR_TYPE;
       }
     }
@@ -87,6 +87,13 @@ export class XPathResultImpl implements XPathResult {
           this.numberValue = v.numberValue;
           this.stringValue = v.stringValue;
           this.booleanValue = v.booleanValue;
+          return;
+        } else if (v == null) {
+          this.nodes = [];
+          this.snapshotLength = 0;
+          this.numberValue = 0;
+          this.stringValue = '';
+          this.booleanValue = false;
           return;
         }
         break;
