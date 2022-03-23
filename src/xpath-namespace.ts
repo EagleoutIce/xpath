@@ -40,7 +40,7 @@ export class XPathNamespace implements Node {
   readonly nextSibling: ChildNode | null;
   readonly parentElement: HTMLElement | null;
   readonly parentNode: Node & ParentNode | null;
-  readonly previousSibling: Node | null;
+  readonly previousSibling: ChildNode | null;
   textContent: string | null;
   appendChild = unsupported;
   cloneNode = unsupported;
