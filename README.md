@@ -38,7 +38,7 @@ npm install jsdom
 
 ## API Documentation
 
-Can be found [here](https://github.com/backslash47/backslash47/blob/master/docs/xpath%20methods.md). See below for example usage.
+Can be found [here](https://github.com/backslash47/xpath/blob/master/docs/xpath%20methods.md). See below for example usage.
 
 ## Your first xpath:
 
