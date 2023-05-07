@@ -104,7 +104,11 @@ export class Functions {
     if (n == null) {
       return new XString('');
     }
-    return new XString(n.lookupNamespaceURI(null));
+    if(isElement(n) || isAttribute(n)) {
+      return new XString(n.namespaceURI);
+    } else {
+      return new XString('');
+    }
   }
 
   static name_(c: XPathContext, ...args: Expression[]) {

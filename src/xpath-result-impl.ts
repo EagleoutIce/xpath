@@ -2,16 +2,16 @@ import { XPathException } from './xpath-exception';
 import { Expression, XBoolean, XNodeSet, XNumber, XString } from './xpath-types';
 
 export class XPathResultImpl implements XPathResult {
-  static readonly ANY_TYPE = 0;
-  static NUMBER_TYPE = 1;
-  static STRING_TYPE = 2;
-  static BOOLEAN_TYPE = 3;
-  static UNORDERED_NODE_ITERATOR_TYPE = 4;
-  static ORDERED_NODE_ITERATOR_TYPE = 5;
-  static UNORDERED_NODE_SNAPSHOT_TYPE = 6;
-  static ORDERED_NODE_SNAPSHOT_TYPE = 7;
-  static ANY_UNORDERED_NODE_TYPE = 8;
-  static FIRST_ORDERED_NODE_TYPE = 9;
+  static readonly ANY_TYPE = 0 as const;
+  static NUMBER_TYPE = 1 as const;
+  static STRING_TYPE = 2 as const;
+  static BOOLEAN_TYPE = 3 as const;
+  static UNORDERED_NODE_ITERATOR_TYPE = 4 as const;
+  static ORDERED_NODE_ITERATOR_TYPE = 5 as const;
+  static UNORDERED_NODE_SNAPSHOT_TYPE = 6 as const;
+  static ORDERED_NODE_SNAPSHOT_TYPE = 7 as const;
+  static ANY_UNORDERED_NODE_TYPE = 8 as const;
+  static FIRST_ORDERED_NODE_TYPE = 9 as const;
 
   resultType: number;
   numberValue: number;

@@ -75,7 +75,7 @@ export function executeTests(implName: string, dom: typeof DOMParser, useDom4: b
 
       const nodes = asNodes(xpath.select('//*[local-name(.)="title" and namespace-uri(.)="myns"]', doc));
       expect((nodes[0] as Element).localName).to.equal('title');
-      expect(nodes[0].lookupNamespaceURI(null)).to.equal('myns');
+      expect((nodes[0] as Element).namespaceURI).to.equal('myns');
 
       const nodes2 = asNodes(xpath.select('/*/title', doc));
       expect(nodes2).to.have.length(0);
@@ -430,7 +430,7 @@ export function executeTests(implName: string, dom: typeof DOMParser, useDom4: b
 
           expect(value).to.equal('Myrtle');
           expect(count).to.equal(2);
-        } catch (e) {
+        } catch (e: any) {
           e.message = description + ': ' + (e.message || '');
           throw e;
         }
@@ -491,7 +491,7 @@ export function executeTests(implName: string, dom: typeof DOMParser, useDom4: b
           const actual = parsed.evaluateString(context);
           const expected = 'Harry PotterHarry Potter is cool';
           expect(actual).to.equal(expected);
-        } catch (e) {
+        } catch (e: any) {
           e.message = description + ': ' + (e.message || '');
           throw e;
         }
@@ -610,7 +610,7 @@ export function executeTests(implName: string, dom: typeof DOMParser, useDom4: b
           expect(xpath.parse('$title = /*/title').evaluateBoolean(context)).to.equal(true);
           expect(xpath.parse('$notTitle = /*/title').evaluateBoolean(context)).to.equal(false);
           expect(xpath.parse('$houses + /*/volumes').evaluateNumber(context)).to.equal(11);
-        } catch (e) {
+        } catch (e: any) {
           e.message = description + ': ' + (e.message || '');
           throw e;
         }

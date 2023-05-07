@@ -1,3 +1,4 @@
+import { isAttribute, isElement } from './utils/types';
 import { XPathNamespace } from './xpath-namespace';
 import { XPathContext } from './xpath-types';
 
@@ -37,7 +38,7 @@ export class NodeTest {
   static isElementOrAttribute = NodeTest.isNodeType([1, 2]);
 
   static nameSpaceMatches(prefix: string | null, xpc: XPathContext, n: Node) {
-    const nNamespace = n.lookupNamespaceURI(null) || '';
+    const nNamespace = (isElement(n) || isAttribute(n) ? n.namespaceURI : undefined) || '';
 
     if (!prefix) {
       return !nNamespace || (xpc.allowAnyNamespaceForNoPrefix && !NodeTest.hasPrefix(n));

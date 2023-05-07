@@ -26,8 +26,8 @@ export class XPathEvaluatorImpl implements XPathEvaluator {
         vr: this.variableResolver,
         p: this.parser
       });
-    } catch (e) {
-      throw new XPathException(XPathException.INVALID_EXPRESSION_ERR, e);
+    } catch (err: any) {
+      throw new XPathException(XPathException.INVALID_EXPRESSION_ERR, err);
     }
   }
   createNSResolver(n?: Node) {
