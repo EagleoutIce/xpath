@@ -104,7 +104,7 @@ export class Functions {
     if (n == null) {
       return new XString('');
     }
-    return new XString(n.namespaceURI);
+    return new XString(n.lookupNamespaceURI(null));
   }
 
   static name_(c: XPathContext, ...args: Expression[]) {

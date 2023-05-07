@@ -1,3 +1,6 @@
+Revision 23: May 7, 2023
+Adapt to typescript 5
+
 Revision 23: May 24, 2019
 Switched to XMLDOM-TS as test implementation
 

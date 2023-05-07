@@ -75,7 +75,7 @@ export function executeTests(implName: string, dom: typeof DOMParser, useDom4: b
 
       const nodes = asNodes(xpath.select('//*[local-name(.)="title" and namespace-uri(.)="myns"]', doc));
       expect((nodes[0] as Element).localName).to.equal('title');
-      expect(nodes[0].namespaceURI).to.equal('myns');
+      expect(nodes[0].lookupNamespaceURI(null)).to.equal('myns');
 
       const nodes2 = asNodes(xpath.select('/*/title', doc));
       expect(nodes2).to.have.length(0);
