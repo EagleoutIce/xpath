@@ -18,11 +18,11 @@ export class XPathResultImpl implements XPathResult {
   stringValue: string;
   booleanValue: boolean;
 
-  nodes: Node[];
-  singleNodeValue: Node;
-  invalidIteratorState: boolean;
-  iteratorIndex: number;
-  snapshotLength: number;
+  nodes: Node[] = undefined as never;
+  singleNodeValue: Node = undefined as never;
+  invalidIteratorState: boolean  = undefined as never;
+  iteratorIndex: number  = undefined as never;
+  snapshotLength: number = undefined as never;
 
   ANY_TYPE = XPathResultImpl.ANY_TYPE;
   NUMBER_TYPE = XPathResultImpl.NUMBER_TYPE;
@@ -121,7 +121,7 @@ export class XPathResultImpl implements XPathResult {
     }
 
     if (this.iteratorIndex === this.nodes.length) {
-      return null as never;
+      return undefined as never;
     }
 
     return this.nodes[this.iteratorIndex++];

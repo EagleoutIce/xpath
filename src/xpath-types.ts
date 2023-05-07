@@ -667,14 +667,14 @@ export class XPathContext {
   variableResolver: VariableResolver;
   namespaceResolver: NamespaceResolver;
   functionResolver: FunctionResolver;
-  contextNode: Node;
+  contextNode: Node  = undefined as never;
   virtualRoot: Node | null;
-  expressionContextNode: Node;
-  isHtml: boolean;
+  expressionContextNode: Node  = undefined as never;
+  isHtml: boolean  = undefined as never;
   contextSize: number;
   contextPosition: number;
-  allowAnyNamespaceForNoPrefix: boolean;
-  caseInsensitive: boolean;
+  allowAnyNamespaceForNoPrefix: boolean  = undefined as never;
+  caseInsensitive: boolean = undefined as never;
 
   constructor(vr: VariableResolver, nr: NamespaceResolver, fr: FunctionResolver) {
     this.variableResolver = vr;
