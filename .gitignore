@@ -13,6 +13,8 @@ types/
 /coverage
 
 # IDE specific
+package-lock.json
+/.idea/
 /.vscode/
 /.project/
 /.settings/
