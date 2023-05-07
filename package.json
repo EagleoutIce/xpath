@@ -1,6 +1,6 @@
 {
   "name": "xpath-ts2",
-  "version": "1.4",
+  "version": "1.4.0",
   "description": "DOM 3 and 4 XPath 1.0 implementation for browser and Node.js environment with support for typescript 5.",
   "author": {
     "name": "Florian Sihler",
