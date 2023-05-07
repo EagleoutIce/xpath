@@ -1,6 +1,6 @@
-# XPath library
+# XPath library for TypeScript 4/5
 
-DOM 3 and 4 XPath 1.0 implemention for browser and Node.js environment with support for custom **Function**, **Variable** and **Namespace** mapping.
+DOM 3 and 4 XPath 1.0 implementation for browser and Node.js environment (which works with TypeScript5) with support for custom **Function**, **Variable** and **Namespace** mapping.
 
 ## Requirements
 
@@ -18,7 +18,7 @@ Install with [npm](http://github.com/isaacs/npm):
 npm install xpath-ts
 ```
 
-This library is xml engine agnostic but I recommend to use [xmldom-ts](https://github.com/backslash47/xmldom), [xmldom](https://github.com/jindw/xmldom) or [jsdom](https://github.com/jsdom/jsdom)
+This library is xml engine agnostic, but I recommend to use [xmldom-ts](https://github.com/backslash47/xmldom), [xmldom](https://github.com/jindw/xmldom) or [jsdom](https://github.com/jsdom/jsdom)
 
 ```
 npm install xmldom-ts
@@ -38,7 +38,7 @@ npm install jsdom
 
 ## API Documentation
 
-Can be found [here](https://github.com/backslash47/xpath/blob/master/docs/xpath%20methods.md). See below for example usage.
+Can be found [here](https://github.com/EagleoutIce/xpath/blob/master/docs/xpath%20methods.md). See below for example usage.
 
 ## Your first xpath:
 
@@ -198,7 +198,7 @@ J. K. Rowling
 #### Download
 
 ```
-git clone 'https://github.com/backslash47/xpath-ts'
+git clone 'https://github.com/EagleoutIce/xpath-ts'
 cd xpath-ts
 ```
 
@@ -232,6 +232,7 @@ npm test
 - **Jimmy Rishe**
 - **Thomas Weinert**
 - **Matus Zamborsky** - _TypeScript rewrite_ - [Backslash47](https://github.com/backslash47)
+- **Florian Sihler** - _port to TypeScript5_ - [EagleoutIce](https://github.com/EagleoutIce)
 - **Others** - [others](https://github.com/goto100/xpath/graphs/contributors)
 
 ## Licence
