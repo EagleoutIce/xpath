@@ -4,6 +4,7 @@
   "description": "DOM 3 and 4 XPath 1.0 implementation for browser and Node.js environment with support for typescript 5.",
   "author": {
     "name": "Florian Sihler",
+    "email": "florian.sihler@web.de",
     "url": "https://github.com/EagleoutIce"
   },
   "license": "MIT",
